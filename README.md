@@ -63,7 +63,7 @@ Copy files from S3:
 aws s3 cp s3://your-bucket-name/ /var/www/html/ --recursive
 OR use scp from your local system
 
-5. 🛢️ Setup MySQL Database
+### 5. 🛢️ Setup MySQL Database
 
 Option A: MySQL on EC2
 
@@ -84,7 +84,7 @@ Use RDS endpoint in connection.php:
 $conn = mysqli_connect("rds-endpoint", "admin", "password", "dbname");
 
 
-6. 🧰 (Optional) Configure MySQL Workbench
+### 6. 🧰 (Optional) Configure MySQL Workbench
    
 Download & install MySQL Workbench
 
@@ -92,8 +92,8 @@ Connect to RDS or EC2 DB using credentials
 
 Create database tables and test connection
 
-7. 🌐 Test the Website
-8. 
+### 7. 🌐 Test the Website
+   
 Visit EC2 Public IP in browser
 
 Try:
@@ -106,7 +106,7 @@ Logging in/out
 
 Checking DB entries
 
-📁 File Overview
+#### 📁 File Overview
 File	Description
 index.php	Landing page
 register.php	Donor registration form
@@ -118,7 +118,7 @@ search1.php	Search by blood group
 style.css	Stylesheet
 blood-bank.jpg, Redblood.jpg	Image assets
 
-🔐 Security Tips
+#### 🔐 Security Tips
 ⚠️ Never upload .pem keys to GitHub
 
 Use environment variables or secrets manager for DB credentials

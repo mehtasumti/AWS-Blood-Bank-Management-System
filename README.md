@@ -63,6 +63,8 @@ Copy files from S3:
 aws s3 cp s3://your-bucket-name/ /var/www/html/ --recursive
 OR use scp from your local system
 
+---
+
 ### 5. 🛢️ Setup MySQL Database
 
 Option A: MySQL on EC2
@@ -71,26 +73,27 @@ sudo apt install mysql-server -y
 sudo mysql_secure_installation
 Create DB and Tables manually
 
-Update connection.php with:
+- Update connection.php with:
 
 $conn = mysqli_connect("localhost", "username", "password", "dbname");
 Option B: Use AWS RDS
 Launch RDS MySQL instance
 
-Whitelist EC2 security group
+- Whitelist EC2 security group
 
-Use RDS endpoint in connection.php:
+- Use RDS endpoint in connection.php:
 
 $conn = mysqli_connect("rds-endpoint", "admin", "password", "dbname");
 
+---
 
 ### 6. 🧰 (Optional) Configure MySQL Workbench
    
-Download & install MySQL Workbench
+- Download & install MySQL Workbench
+- Connect to RDS or EC2 DB using credentials
+- Create database tables and test connection
 
-Connect to RDS or EC2 DB using credentials
-
-Create database tables and test connection
+---
 
 ### 7. 🌐 Test the Website
    
@@ -98,34 +101,34 @@ Visit EC2 Public IP in browser
 
 Try:
 
-Registering a donor
+- Registering a donor
+- Searching by blood group
+- Logging in/out
+- Checking DB entries
 
-Searching by blood group
-
-Logging in/out
-
-Checking DB entries
+---
 
 #### 📁 File Overview
+
 File	Description
-index.php	Landing page
-register.php	Donor registration form
-login.php	User login interface
-logout.php	Logout functionality
-insert.php	Inserts form data into DB
-connection.php	DB connection logic
-search1.php	Search by blood group
-style.css	Stylesheet
-blood-bank.jpg, Redblood.jpg	Image assets
+- index.php	Landing page
+- register.php	Donor registration form
+- login.php	User login interface
+- logout.php	Logout functionality
+- insert.php	Inserts form data into DB
+- connection.php	DB connection logic
+- search1.php	Search by blood group
+- style.css	Stylesheet
+- blood-bank.jpg, Redblood.jpg	Image assets
+
+  ---
 
 #### 🔐 Security Tips
 ⚠️ Never upload .pem keys to GitHub
 
-Use environment variables or secrets manager for DB credentials
-
-Validate user input to prevent SQL injection
-
-Enable HTTPS and secure EC2 with security groups
+- Use environment variables or secrets manager for DB credentials
+- Validate user input to prevent SQL injection
+- Enable HTTPS and secure EC2 with security groups
 
 👨‍💻 Author
 Sumti Mehta

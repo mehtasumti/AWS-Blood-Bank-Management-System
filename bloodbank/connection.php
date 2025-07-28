@@ -1,9 +1,9 @@
 <?php
 // Define database connection variables
-$db_host = 'bloodbankdb.ci1c600sa0bh.us-east-1.rds.amazonaws.com'; 
+$db_host = 'hostname_rds_endpoint'; 
 $db_username = 'admin';
-$db_password = 'K21academy.com';
-$db_name = 'bloodbankdb';
+$db_password = 'yourpassword';
+$db_name = 'yourdbname';
 
 // Create a connection using object-oriented approach
 try {
